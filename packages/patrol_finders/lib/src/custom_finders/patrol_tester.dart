@@ -685,6 +685,7 @@ class PatrolTester {
     Duration? dragDuration,
     SettlePolicy? settlePolicy,
     bool enablePatrolLog = true,
+    bool continuous = false,
   }) {
     return TestAsyncUtils.guard(
       () => wrapWithPatrolLog<PatrolFinder>(
@@ -864,6 +865,7 @@ class PatrolTester {
             dragDuration: dragDuration,
             settlePolicy: settlePolicy,
             enablePatrolLog: false,
+            continuous: continuous,
           );
 
           return resolvedFinder;
