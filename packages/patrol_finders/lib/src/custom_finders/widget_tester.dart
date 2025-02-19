@@ -117,6 +117,7 @@ class PatrolWidgetTester extends _PWT with _ShowKeyboardPatch {
     Offset moveStep, {
     int maxIteration = 50,
     Duration duration = const Duration(milliseconds: 50),
+    bool continuous = false, // Adicionado para compatibilidade
   }) {
     return _tester.dragUntilVisible(
       finder,
@@ -124,6 +125,7 @@ class PatrolWidgetTester extends _PWT with _ShowKeyboardPatch {
       moveStep,
       maxIteration: maxIteration,
       duration: duration,
+      continuous: continuous, // Passar o novo parâmetro adicionado
     );
   }
 
